@@ -131,3 +131,68 @@ console.log(newTxt)
 const newTxtToString = newTxt.toString()
 
 console.log(newTxtToString)
+
+function first(){
+    // Simulate a code delay
+    setTimeout( function(){
+      console.log(1);
+    }, 500 );
+  }function second(){
+    console.log(2);
+  }
+  first();
+  second();
+  
+/*
+A callback is also known as a high-order-function
+
+passing a function another function "otherFunction"
+
+example pattern->
+
+let students = ['Dale', 'Frank', 'Kyran', 'Aaron']
+
+students.forEach(function (eachStudent, index)){
+    console.log(index + 1 + " " + eachStudent)
+}
+
+When we pass a function as an argument to another function, you are only passing the function definition ()
+otherFunction has the callback function in its paramaters as function definition
+it can execute the callback at any time
+
+------------------------------------------------------------------------------------------------
+
+const dat=[]
+function myData(dataFromUser){
+    if (typeof dataFromUser === "string"){
+        console.log(dataFromUser)
+    }
+    else if (typeof dataFromUser === 'object'){
+        for (let item in dataFromUser){
+            console.log(item + ":" + dataFromUser[item])
+        }
+    }
+}
+
+const result = function input(dataInput, callback){
+    dat.push(dataInput)
+    callback(dataInput)
+}
+*/
+
+/*
+let pathToNextLocation
+fs.readFile('./file/location1.md', 'utf-8', function(err,val)){
+    if(err) throw new Error
+    pathToNextLocation = val;
+    fs.readFile(pathToNextLocation, 'utf-8', function(err,val)){
+        etcetcetc
+    }
+}
+1-name your functions and declare them and pass name only of the function into as a callback
+
+2-Seperate your code into modules. This makes for good coding in Express.js
+*/
+
+
+
