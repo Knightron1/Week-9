@@ -142,7 +142,7 @@ function first(){
   }
   first();
   second();
-  
+
 /*
 A callback is also known as a high-order-function
 
@@ -194,5 +194,62 @@ fs.readFile('./file/location1.md', 'utf-8', function(err,val)){
 2-Seperate your code into modules. This makes for good coding in Express.js
 */
 
+let myObject = {
+    firstName : 'Luke',
+    lastName : 'Barakat',
+    age : 'Too old for this s***', //don't bust me for this lethal weapon reference
 
+}
+console.log(myObject)
 
+myObject.middleName = 'test'
+
+console.log(myObject.firstName)
+console.log(myObject)
+
+/*
+When using dot(.) notation, some general naming rules include:
+-Only use letters, digits, underscores and symbols.
+-Must start with a letter or underscore
+-Names are case sensitive
+-Must not match a reserved keyword in javascript
+
+*/
+
+let students = {
+    name: 'Luke',
+    class: 'SDV',
+    school: 'NMIT',
+}
+
+console.log(Object.keys(students));
+// Returns an array containing the names of all of the given object's own enumerable string properties.
+// Object.freeze(students);
+// Freezes and object. Other code cannot change or delete its properties
+students.name = 'Phil';
+
+console.log(students);
+
+console.log(Object.isFrozen(students));
+
+let anotherStudent = {
+    studentName: 'Luke',
+    otherClass: 'CSA',
+    school: "MIT",
+
+}
+
+const newObj = Object.assign(students, anotherStudent)
+console.log(newObj)
+
+let checker = Object.is(students.name, anotherStudent.studentName);
+console.log(checker)
+
+/*
+Object.create()
+// Creates a new object with the specified prototype object and properties.
+Object.is()
+// Compares if two values are the same value. Equates all NaN values (which differs from both Abstract Equality Comparison and Strict Equality Comparison).
+Object.isExtensible()
+// Determines if extending of an object is allowed
+*/
