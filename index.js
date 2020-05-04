@@ -90,7 +90,8 @@ testFunc(12 + "x12");
 testFunc('is a square!');
 
 // function literal
-(function(x,y){ console.log(x+y)})(2,5)
+(function(x,y){ console.log(x+y)})(2,5);
+
 
 // callbacks
 
@@ -103,7 +104,7 @@ testFunc('is a square!');
 }
 */
 
-// The below is callback hell, with results each function calling from another function within it
+// The below is callback hell, with results each function calling from another function within it until it gets too confusing to read 
 /* 
 functionOne(data, function(resultOne)){
     functionTwo(resultOne, function(resultTwo)){
@@ -112,3 +113,21 @@ functionOne(data, function(resultOne)){
         }
     }
 }
+*/
+
+console.log('Hello World'.length);
+
+const text1='first name'
+const text2='last name'
+const fullName=(text1.concat(" "+text2));
+console.log(fullName);
+
+console.log(text1.toUpperCase());
+
+console.log(text1.trim())
+
+const newTxt = new String('SDV503')
+console.log(newTxt)
+const newTxtToString = newTxt.toString()
+
+console.log(newTxtToString)
