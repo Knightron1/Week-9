@@ -56,3 +56,30 @@ console.log(Number.isFinite(0));
 console.log(Number.isFinite(-12));
 console.log(Number.isFinite(Infinity));
 
+console.log(224.56.toFixed(1))
+console.log(224.56.toLocaleString());
+
+function money(x,y){
+    x = Number(x)
+    y = y || "$"
+
+    if(Number.isNaN(x) || typeof y != 'string') {
+        return "WRONG!"
+    }
+    return y + x.toFixed(2)
+}
+
+console.log(money(12,))
+console.log(money(12,"€"))
+
+const arr1 = ['a', 'b', '3', 'four']
+
+console.log(arr1[3])
+
+console.log('Hello World'[4])
+
+const txt = ('Hello World')
+console.log(txt[7] = "e")
+// Cant modify strings
+
+console.log(txt + ", you all are okay")
