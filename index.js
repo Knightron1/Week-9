@@ -83,3 +83,32 @@ console.log(txt[7] = "e")
 // Cant modify strings
 
 console.log(txt + ", you all are okay")
+
+const testFunc = function(x){console.log(x);}
+
+testFunc(12 + "x12");
+testFunc('is a square!');
+
+// function literal
+(function(x,y){ console.log(x+y)})(2,5)
+
+// callbacks
+
+/* function anyFunction(data, callback){
+    async-process(data).then(       \\do asynchronous request
+        function(result){           \\then on return
+            callback(result)        \\execute callback
+        }
+    )
+}
+*/
+
+// The below is callback hell, with results each function calling from another function within it
+/* 
+functionOne(data, function(resultOne)){
+    functionTwo(resultOne, function(resultTwo)){
+        functionThree(resultTwo, function(resultThree)){
+            more code~~~~~
+        }
+    }
+}
